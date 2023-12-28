@@ -5,30 +5,62 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FirstFragment">
-    <androidx.constraintlayout.widget.ConstraintLayout
+        tools:context=".FirstFragment" android:background="#FFEB3B">
+    
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
-        <Button
-                android:id="@+id/button_first"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/next"
-                app:layout_constraintBottom_toTopOf="@id/textview_first"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-                android:id="@+id/textview_first"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/lorem_ipsum"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button_first"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:padding="16dp" android:background="#9C27B0">
+
+            <!-- First ConstraintLayout content -->
+
+            <Button
+                    android:id="@+id/button_first"
+                    android:layout_width="141dp"
+                    android:layout_height="73dp"
+                    android:text="@string/next"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="28dp"
+                    android:textSize="24sp" android:background="#4EC34A"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="713dp"
+                android:padding="16dp"
+                android:background="#FFEB3B">
+
+            <!-- Second ConstraintLayout content -->
+
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="224dp"
+                    android:layout_height="165dp"
+                    android:textSize="34sp"
+                    android:textAlignment="center"
+                    android:textColor="#2196F3"
+                    android:textStyle="bold|italic"
+                    android:text="@string/first_fragment_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guideline"
+                    android:layout_marginTop="52dp"
+                    app:layout_constraintHorizontal_bias="0.497"/>
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.3"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
 </androidx.core.widget.NestedScrollView>
